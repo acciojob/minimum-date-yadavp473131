@@ -1,5 +1,26 @@
 function minDate(dates) {
   //write you code here
+    let Arr = [];
+	for(let i=0;i<dates.length;i++){
+        let dateStr = dates[i].slice(0,4) + dates[i].slice(5,7)+ dates[i].slice(8,10);
+		let dateNum = Number(dateStr);
+		
+		Arr.push(dateNum);
+	}
+	let smallestDate = 99999999;
+
+	for(let i=0;i<Arr.length;i++){
+		if(Arr[i]<smallestDate){
+			smallestDate = Arr[i];
+		}
+	}
+	let year = smallestDate.toString().slice(0,4);
+	let month = smallestDate.toString().slice(4,6);
+	let date = smallestDate.toString().slice(6,8);
+	
+	
+	let ans = `"${year+month+date}"`;
+	return ans;
 }
 
 // Do not change the code
@@ -38,3 +59,7 @@ var dates = [
 ];
 
 alert(minDate(dates));
+
+
+
+
