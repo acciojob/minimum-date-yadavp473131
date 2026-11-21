@@ -19,7 +19,7 @@ function minDate(dates) {
 	let date = smallestDate.toString().slice(6,8);
 	
 	
-	let ans = `"${year+month+date}"`;
+	let ans = year+"/"+month+"/"+date;
 	return ans;
 }
 
